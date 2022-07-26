@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.10.4 on win32)" generated="20220719 12:04:26.675" rpa="false">
+<suite id="s1" name="MyTest" source="C:\Users\kkrid\eclipse-workspace\DemoRobot\Folder\MyTest.robot">
+<test id="s1-t1" name="login positive">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${appURL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20220719 12:04:26.916" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20220719 12:04:26.916" endtime="20220719 12:04:32.184"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220719 12:04:33.954" endtime="20220719 12:04:34.130"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:txtUsername</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20220719 12:04:34.132" level="INFO">Typing text 'admin' into text field 'name:txtUsername'.</msg>
+<status status="PASS" starttime="20220719 12:04:34.131" endtime="20220719 12:04:34.339"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id='txtPassword']</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20220719 12:04:34.340" level="INFO">Typing text 'admin123' into text field 'xpath://*[@id='txtPassword']'.</msg>
+<status status="PASS" starttime="20220719 12:04:34.340" endtime="20220719 12:04:34.688"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id='btnLogin']</arg>
+</arguments>
+<msg timestamp="20220719 12:04:34.690" level="INFO">Clicking button 'xpath://*[@id='btnLogin']'.</msg>
+<status status="PASS" starttime="20220719 12:04:34.689" endtime="20220719 12:04:38.330"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:#divLoginButton span</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220719 12:04:39.962" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220719 12:04:39.970" level="FAIL">Element with locator 'css:#divLoginButton span' not found.</msg>
+<status status="FAIL" starttime="20220719 12:04:38.331" endtime="20220719 12:04:39.970"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220719 12:04:39.972" endtime="20220719 12:04:42.235"></status>
+</kw>
+<tags>
+<tag>smoke</tag>
+</tags>
+<status status="FAIL" starttime="20220719 12:04:26.915" endtime="20220719 12:04:42.236" critical="yes">Element with locator 'css:#divLoginButton span' not found.</status>
+</test>
+<test id="s1-t2" name="login negative">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${appURL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20220719 12:04:42.239" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20220719 12:04:42.239" endtime="20220719 12:04:47.534"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220719 12:04:47.535" endtime="20220719 12:04:47.665"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:txtUsername</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20220719 12:04:47.666" level="INFO">Typing text 'admin' into text field 'name:txtUsername'.</msg>
+<status status="PASS" starttime="20220719 12:04:47.666" endtime="20220719 12:04:47.808"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id='txtPassword']</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20220719 12:04:47.809" level="INFO">Typing text 'admin123' into text field 'xpath://*[@id='txtPassword']'.</msg>
+<status status="PASS" starttime="20220719 12:04:47.808" endtime="20220719 12:04:47.942"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id='btnLogin']</arg>
+</arguments>
+<msg timestamp="20220719 12:04:47.943" level="INFO">Clicking button 'xpath://*[@id='btnLogin']'.</msg>
+<status status="PASS" starttime="20220719 12:04:47.943" endtime="20220719 12:04:52.470"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:#divLoginButton span</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220719 12:04:52.756" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220719 12:04:52.757" level="FAIL">Element with locator 'css:#divLoginButton span' not found.</msg>
+<status status="FAIL" starttime="20220719 12:04:52.471" endtime="20220719 12:04:52.757"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220719 12:04:52.759" endtime="20220719 12:04:54.969"></status>
+</kw>
+<tags>
+<tag>Regression</tag>
+</tags>
+<status status="FAIL" starttime="20220719 12:04:42.238" endtime="20220719 12:04:54.970" critical="yes">Element with locator 'css:#divLoginButton span' not found.</status>
+</test>
+<doc>Simple example using SeleniumLibrary.</doc>
+<status status="FAIL" starttime="20220719 12:04:26.677" endtime="20220719 12:04:54.973"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2">Critical Tests</stat>
+<stat pass="0" fail="2">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Regression</stat>
+<stat pass="0" fail="1">smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" id="s1" name="MyTest">MyTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
